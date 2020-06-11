@@ -7,8 +7,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Person implements Serializable {
@@ -24,7 +26,7 @@ public class Person implements Serializable {
 
     @OneToMany
     @JoinColumn(name = "person_id")
-    private List<Phone> phones = new ArrayList<>();
+    private Set<Phone> phones = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -50,11 +52,11 @@ public class Person implements Serializable {
         this.lastName = lastName;
     }
 
-    public List<Phone> getPhones() {
+    public Set<Phone> getPhones() {
         return phones;
     }
 
-    public void setPhones(List<Phone> phones) {
+    public void setPhones(Set<Phone> phones) {
         this.phones = phones;
     }
 

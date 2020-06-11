@@ -8,8 +8,10 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Student implements Serializable {
@@ -28,7 +30,7 @@ public class Student implements Serializable {
     @JoinTable(name = "student_course",
             joinColumns = {@JoinColumn(name = "student_id")},
             inverseJoinColumns = {@JoinColumn(name = "course_id")})
-    private List<Course> courses = new ArrayList<>();
+    private Set<Course> courses = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -54,11 +56,11 @@ public class Student implements Serializable {
         this.lastName = lastName;
     }
 
-    public List<Course> getCourses() {
+    public Set<Course> getCourses() {
         return courses;
     }
 
-    public void setCourses(List<Course> courses) {
+    public void setCourses(Set<Course> courses) {
         this.courses = courses;
     }
 

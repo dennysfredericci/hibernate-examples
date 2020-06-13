@@ -18,6 +18,8 @@ In this repository you will see a set of hibernate examples.
 * Enumeration
 * Large Objects - Blob and Clob
 
+DTO - Transformer, Contructor(Native and Named)
+
 ### Miscellaneous
 
 * Comment on SQL Statements

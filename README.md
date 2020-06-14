@@ -15,15 +15,15 @@ In this repository you will see a set of hibernate examples.
 * OneToMany - Unidirectional
 * ManyToMany - Bidirectional
 * ManyToMany - Unidirectional
-* Enumeration
 * Large Objects - Blob and Clob
-
-DTO - Transformer, Contructor(Native and Named)
+* Enumeration
+* Embeddable and Embedded
 
 ### Miscellaneous
 
 * Comment on SQL Statements
 * Attribute Converter
+* Data Transfer Objects
 
 
 ## Database Configuration

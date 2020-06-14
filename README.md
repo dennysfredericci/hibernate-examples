@@ -30,7 +30,7 @@ In this repository you will see a set of hibernate examples.
 
 Most of examples in this repository use PostgreSQL 9.6 if you have docker installed just run the command below to setup your database.
 
-
+```
 docker run \
     --name hibernate-examples-postgres \
     --env 'POSTGRES_DB=hibernate-examples-database' \
@@ -39,3 +39,4 @@ docker run \
     --detach \
     --publish 5432:5432 \
     postgres:9.6.18-alpine
+```

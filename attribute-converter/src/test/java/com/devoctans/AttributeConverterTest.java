@@ -33,7 +33,7 @@ public class AttributeConverterTest {
         personQuery.setParameter("id", 1L);
 
         Person person = personQuery.getSingleResult();
-        assertThat(person.getStatus()).isEqualTo(Status.ACTIVE);
+        assertThat(person.getGender()).isEqualTo(Gender.MALE);
 
         entityManager.getTransaction().commit();
         entityManager.close();

@@ -4,8 +4,7 @@ In this hibernate example you can see how to use an attribute converter
 
 This is pretty useful when Database Administrators enforce developers to use some set of data.
 
-Let's say we have an enumeration with ACTIVE and INACTIVE and your Database Administrator told you to use 'A' for ACTIVE and 'I' for INACTIVE.
-
+Let's say we have an enumeration Gender(MALE, FEMALE and UNKNOWN) and your Database Administrator told you to use 'M' for MALE, 'F' for FEMALE and 'U' for UNKNOWN.
 
 So to achieve this goal you have:
 
@@ -21,8 +20,8 @@ public interface AttributeConverter<X,Y> {
 2 - Add your implementation using the annotation @Convert
 
 ```
-@Convert(converter = StatusConverter.class)
-private Status status;
+@Convert(converter = GenderConverter.class)
+private Gender gender;
 ```
 
 You can skip that part if you add the annotation @Converter(autoApply = true) in your implementation

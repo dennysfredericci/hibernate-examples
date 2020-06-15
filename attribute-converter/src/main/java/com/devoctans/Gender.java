@@ -1,13 +1,14 @@
 package com.devoctans;
 
-public enum Status {
+public enum Gender {
 
-    ACTIVE("A"),
-    INACTIVE("I");
+    FEMALE("F"),
+    MALE("M"),
+    UNKNOWN("U");
 
     private final String code;
 
-    Status(String code) {
+    Gender(String code) {
         this.code = code;
     }
 

@@ -4,7 +4,7 @@ public enum Gender {
 
     FEMALE("F"),
     MALE("M"),
-    UNKNOWN("U");
+    NOT_AVAILABLE("N");
 
     private final String code;
 

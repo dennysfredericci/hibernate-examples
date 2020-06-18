@@ -4,7 +4,8 @@ import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 import java.util.Arrays;
 
-@Converter(autoApply = true)
+
+@Converter
 public class GenderConverter implements AttributeConverter<Gender, String> {
 
     @Override
@@ -16,6 +17,6 @@ public class GenderConverter implements AttributeConverter<Gender, String> {
     public Gender convertToEntityAttribute(String code) {
         return Arrays.stream(Gender.values()).filter(gender -> gender.getCode().equals(code))
                 .findFirst()
-                .orElse(Gender.UNKNOWN);
+                .orElse(Gender.NOT_AVAILABLE);
     }
 }

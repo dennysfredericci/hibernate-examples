@@ -1,5 +1,6 @@
 package com.devoctans;
 
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.Serializable;
@@ -17,6 +18,7 @@ public class Person implements Serializable {
 
     private String lastName;
 
+    @Convert(converter = GenderConverter.class)
     private Gender gender;
 
     public Long getId() {

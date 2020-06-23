@@ -33,8 +33,7 @@ public class EnumerationTest {
         personQuery.setParameter("id", 1L);
 
         Person person = personQuery.getSingleResult();
-        assertThat(person.getStatusName()).isEqualTo(Status.ACTIVE);
-        assertThat(person.getStatusOrdinal()).isEqualTo(Status.ACTIVE);
+        assertThat(person.getGender()).isEqualTo(Gender.FEMALE);
 
         entityManager.getTransaction().commit();
         entityManager.close();

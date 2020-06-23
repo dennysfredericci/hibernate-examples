@@ -8,7 +8,7 @@ You basically have to use  the annotation @Enumerated
 
 ```
 @Enumerated(EnumType.STRING)
-private Status statusName;
+private Gender gender;
 ```
 
 
@@ -16,7 +16,7 @@ private Status statusName;
 
 ```
 @Enumerated(EnumType.ORDINAL)
-private Status statusOrdinal;
+private Gender gender;
 ```
 
 DISCLAIMER: Try to avoid much as possible to use this approach!

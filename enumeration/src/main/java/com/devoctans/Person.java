@@ -20,11 +20,7 @@ public class Person implements Serializable {
     private String lastName;
 
     @Enumerated(EnumType.STRING)
-    private Status statusName;
-
-    // Avoid this approach
-    @Enumerated(EnumType.ORDINAL)
-    private Status statusOrdinal;
+    private Gender gender;
 
     public Long getId() {
         return id;
@@ -50,20 +46,12 @@ public class Person implements Serializable {
         this.lastName = lastName;
     }
 
-    public Status getStatusName() {
-        return statusName;
+    public Gender getGender() {
+        return gender;
     }
 
-    public void setStatusName(Status statusName) {
-        this.statusName = statusName;
-    }
-
-    public Status getStatusOrdinal() {
-        return statusOrdinal;
-    }
-
-    public void setStatusOrdinal(Status statusOrdinal) {
-        this.statusOrdinal = statusOrdinal;
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 
     @Override
@@ -74,15 +62,13 @@ public class Person implements Serializable {
         return Objects.equals(id, person.id) &&
                 Objects.equals(firstName, person.firstName) &&
                 Objects.equals(lastName, person.lastName) &&
-                statusName == person.statusName &&
-                statusOrdinal == person.statusOrdinal;
+                gender == person.gender;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, statusName, statusOrdinal);
+        return Objects.hash(id, firstName, lastName, gender);
     }
-
 
     @Override
     public String toString() {
@@ -90,8 +76,7 @@ public class Person implements Serializable {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", statusName=" + statusName +
-                ", statusOrdinal=" + statusOrdinal +
+                ", gender=" + gender +
                 '}';
     }
 }
